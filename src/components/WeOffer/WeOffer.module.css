@@ -1,0 +1,110 @@
+.we-offer {
+  /*background: var(--main-color);*/
+
+  /*background-image: url("../../assets/we-offer2.jpg");*/
+  /*background-position: center;*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+  /*justify-content: space-between;*/
+  align-items: center;
+  margin-bottom: 150px;
+  padding: 100px;
+}
+
+
+/*.photos-wrapper img {*/
+/*  object-fit: cover;*/
+/*  position: relative;*/
+/*  display: block;*/
+/*}*/
+
+/*.photos-wrapper div:first-child img {*/
+/*  object-position: bottom;*/
+/*}*/
+
+
+/*.photo-offer {*/
+/*  position: relative;*/
+/*}*/
+
+
+/*.photo-offer:nth-child(2):before {*/
+/*  !*content: '';*!*/
+/*  position: absolute;*/
+/*  top: -140px;*/
+/*  left: 280px;*/
+/*  border: 1px solid var(--second-color);*/
+/*  width: 460px;*/
+/*  height: 460px;*/
+/*}*/
+
+.text-wrapper h2 {
+  font-size: 50px;
+  color: black;
+  margin-bottom: 30px;
+}
+
+.text {
+  font-family: "NeueMachinaRegular", 'sans-serif';
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: black;
+}
+
+.text span {
+  font-weight: 600;
+  /*font-size: 30px;*/
+  font-family: "NeueMachinaRegular", 'sans-serif';
+}
+
+
+.statistic-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+}
+
+
+.statistic {
+  position: relative;
+  color: black;
+}
+
+.statistic:nth-child(1) {
+  padding-right: 50px;
+}
+
+.statistic:nth-child(2) {
+  padding: 0 50px;
+}
+
+.statistic:nth-child(3) {
+  padding-left: 50px;
+}
+
+.statistic:not(:last-child):before {
+  content: '';
+  letter-spacing: 3px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  height: 60%;
+  width: 2px;
+  background: var(--second-color);
+}
+
+.statistic span {
+  font-size: 70px;
+  font-family: "NeueMachinaUltraBold", 'sans-serif';
+  font-weight: 400;
+
+}
+
+.statistic p {
+  font-family: "NeueMachinaLight", 'sans-serif';
+  font-size: 18px;
+  font-weight: 400;
+
+}

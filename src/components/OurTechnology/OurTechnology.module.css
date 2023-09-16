@@ -1,0 +1,118 @@
+.our-technology {
+  padding: 0 100px;
+  margin-bottom: 150px;
+}
+
+.our-technology h2 {
+  font-size: 60px;
+  margin-bottom: 70px;
+}
+.our-technology h2 span {
+  color: white;
+  background: var(--main-color);
+  padding: 0 5px;
+}
+
+.technologies {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  padding-left: 3px;
+}
+
+.technologies li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.technologies li:nth-child(1):before, .technologies li:nth-child(2):before, .technologies li:nth-child(3):before {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  background: var(--main-color);
+  width: calc(100% + 60px);
+  height: 1px;
+}
+
+.technologies li:nth-child(1):after, .technologies li:nth-child(2):after, .technologies li:nth-child(4):before, .technologies li:nth-child(5):before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -30px;
+  background: var(--main-color);
+  width: 1px;
+  height: calc(100% + 40px);
+}
+
+.technologies li:nth-child(4):before, .technologies li:nth-child(5):before {
+  top: auto;
+  bottom: 0;
+}
+
+
+.technologies li svg {
+  height: 25px;
+  width: 25px;
+}
+
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+
+
+.header img {
+  margin-bottom: 55px;
+}
+
+.count-wrapper {
+  margin-bottom: 10px;
+}
+
+.count {
+  font-size: 20px;
+  font-weight: 400;
+  margin-left: auto;
+  color: var(--main-color);
+}
+
+.name {
+  position: relative;
+  font-size: 30px;
+}
+
+.name:before {
+  /*content: '';*/
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -17px;
+  background: var(--main-color);
+}
+
+
+.description {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-family: NeueMachinaLight, 'sans-serif';
+}
+
+.more {
+  border: none;
+  background: none;
+  font-family: inherit;
+  text-decoration: underline;
+  color: var(--main-color);
+  margin-top: auto;
+}

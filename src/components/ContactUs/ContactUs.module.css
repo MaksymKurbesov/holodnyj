@@ -1,0 +1,95 @@
+.contact-us {
+  /*padding: 0 100px;*/
+  /*margin-bottom: 150px;*/
+}
+
+.contact-us h2 {
+  font-size: 60px;
+  margin-bottom: 70px;
+}
+
+.contact-us h2 span {
+  color: var(--main-color);
+}
+
+.contact-wrapper {
+  display: flex;
+  /*max-width: 900px;*/
+  margin: 0 auto;
+  background: var(--main-color);
+}
+
+
+.contact-wrapper h3 {
+  font-size: 70px;
+  color: white;
+  margin-bottom: 20px;
+  font-family: NeueMachinaUltraBold;
+}
+
+.contact-wrapper p {
+  font-family: NeueMachinaLight, 'sans-serif';
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 80px;
+}
+
+.text {
+  padding: 70px 100px;
+}
+
+.inputs-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.input {
+  position: relative;
+  max-width: 550px;
+}
+
+.input input {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  /*height: 70px;*/
+  background: none;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  font-family: NeueMachinaRegular, sans-serif;
+  font-size: 20px;
+  color: white;
+  outline: none;
+  transition: 0.35s ease all;
+}
+
+
+
+.input label {
+  position: absolute;
+  top: 15px;
+  color: white;
+  font-family: NeueMachinaRegular, sans-serif;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.input input:focus {
+  border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+
+
+.send-button {
+  width: 350px;
+  background: white;
+  border: none;
+  padding: 10px 35px;
+  border-radius: 20px;
+  /*font-family: DisketMonoRegular, sans-serif;*/
+  font-family: NeueMachinaRegular, sans-serif;
+  text-transform: uppercase;
+}

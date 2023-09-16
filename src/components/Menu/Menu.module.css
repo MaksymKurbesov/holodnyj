@@ -1,0 +1,126 @@
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  transition: 0.45s ease opacity 0.2s;
+  opacity: 0;
+}
+
+
+.isOpenCover {
+  opacity: 1;
+  z-index: 5;
+}
+
+.isClosed {
+  opacity: 0;
+  height: 0;
+  padding: 0;
+  z-index: 3;
+  visibility: hidden;
+  transition: 0.45s ease opacity 0.2s, z-index 0.45s ease 2s;
+}
+
+
+.menu-wrapper {
+  background-color: #020202;
+  color: white;
+  font-family: NeueMachinaUltralight, 'sans-serif';
+  transition: 0.45s ease all;
+  margin: 0 auto;
+  height: 0;
+  overflow: hidden;
+}
+
+.isOpenMenu {
+  height: 650px;
+  /*max-height: 800px;*/
+  transition: 0.5s ease all;
+}
+
+
+.menu-wrapper a {
+  position: relative;
+  font-size: 36px;
+}
+
+.menu-content {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  row-gap: 100px;
+  max-width: 60%;
+  margin: 0 auto 120px;
+  padding-top: 200px;
+  text-transform: uppercase;
+}
+
+
+.nav-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 30px;
+  /*max-width: 70%;*/
+  /*margin-bottom: 100px;*/
+}
+
+.nav-list li {
+  position: relative;
+  color: var(--main-color);
+}
+
+
+.nav-list li:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -30px;
+  width: 15px;
+  height: 2px;
+  background: var(--main-color);
+}
+
+.contacts {
+  margin-top: auto;
+  color: rgba(255, 255, 255, 1);
+  font-size: 20px;
+}
+
+.contacts p span {
+  display: block;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contacts p:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  /*grid-row: 2 / 2;*/
+}
+
+.social-links p {
+  color: rgba(255, 255, 255, 0.5);
+  /*border-bottom: 1px solid var(--main-color);*/
+}
+
+.social-links p:not(:last-child) {
+  margin-right: 50px;
+  position: relative;
+}
+
+.social-links p:not(:last-child):after {
+  content: '/';
+  position: absolute;
+  /*top: 50%;*/
+  /*transform: translateY(-50%);*/
+  right: -30px;
+  line-height: 21px;
+}

@@ -1,0 +1,13 @@
+.accordion-wrapper {
+  position: relative;
+  /*flex-direction: column;*/
+  /*margin-left: auto;*/
+}
+
+
+.image {
+  position: absolute;
+  top: -100px;
+  left: 150px;
+}
+

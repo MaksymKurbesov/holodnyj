@@ -1,0 +1,10 @@
+.project {
+  padding: 70px 100px 0;
+  text-align: center;
+}
+
+.name {
+  font-family: NeueMachinaLight, sans-serif;
+  font-size: 70px;
+  margin-bottom: 50px;
+}

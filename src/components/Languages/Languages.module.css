@@ -1,0 +1,35 @@
+.languages {
+  display: flex;
+  margin-right: 30px;
+  z-index: 7;
+  margin-left: auto;
+}
+
+
+.languages button {
+  display: block;
+  width: 45px;
+  height: 45px;
+  border: none;
+  background: var(--black-color);
+  border-radius: 50%;
+  color: white;
+  font-family: inherit;
+  transition: 0.45s ease all 0.15s;
+}
+
+.isOpen button {
+  background: white;
+  color: var(--black-color);
+}
+
+.languages button:first-child {
+  margin-right: 15px;
+  background: var(--gray-color);
+  color: #1e1e1f;
+}
+
+.isOpen button:first-child  {
+  background: #1e1e1f;
+  color: white;
+}

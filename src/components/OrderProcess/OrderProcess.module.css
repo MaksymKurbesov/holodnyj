@@ -1,0 +1,17 @@
+.order-process {
+  padding: 0 100px;
+  margin-bottom: 150px;
+}
+
+.order-process h2 {
+  font-size: 60px;
+  margin-bottom: 70px;
+}
+
+.order-process h2 span {
+  color: white;
+  background: var(--main-color);
+  padding: 0 5px;
+}
+
+
