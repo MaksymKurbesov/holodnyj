@@ -1,0 +1,13 @@
+.slider {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+.dots-wrapper {
+  max-width: 100px;
+  position: relative;
+  left: -50px;
+}

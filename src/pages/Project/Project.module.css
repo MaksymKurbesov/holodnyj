@@ -1,10 +1,92 @@
 .project {
   padding: 70px 100px 0;
-  text-align: center;
+  /*text-align: center;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: -96px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--black-color);
+  color: var(--second-color);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: DisketMonoRegular, 'sans-serif';
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .name {
+  position: relative;
   font-family: NeueMachinaLight, sans-serif;
-  font-size: 70px;
+  font-size: 80px;
+  margin-bottom: 100px;
+}
+
+.name:before {
+  content: '';
+  position: absolute;
+  top: 53%;
+  transform: translateY(-50%);
+  left: -20px;
+  width: 8px;
+  height: 75%;
+  background: var(--main-color);
+}
+
+.geo-icon {
+  width: 18px;
+  fill: rgba(0, 0, 0, 1);
+  margin-bottom: 10px;
+}
+
+.address {
+  font-family: NeueMachinaLight, sans-serif;
   margin-bottom: 50px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.main-image {
+  margin-bottom: 170px;
+}
+
+.description-title {
+  font-size: 50px;
+  /*font-weight: 700;*/
+  font-family: NeueMachinaLight, sans-serif;
+  color: var(--main-color);
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.description {
+  max-width: 800px;
+  font-family: NeueMachinaLight, sans-serif;
+  font-size: 24px;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 170px;
+}
+
+.additional-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 500px 500px 500px;
+  gap: 100px;
+  margin-bottom: 100px;
+}
+
+.additional-photos li:last-child {
+  grid-column: 1 / span 2;
+}
+
+.additional-photos img {
+  object-fit: cover;
 }

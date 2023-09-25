@@ -70,7 +70,7 @@
 .input label {
   position: absolute;
   top: 15px;
-  color: white;
+  color: var(--light-gray-color);
   font-family: NeueMachinaRegular, sans-serif;
 }
 
@@ -89,7 +89,6 @@
   border: none;
   padding: 10px 35px;
   border-radius: 20px;
-  /*font-family: DisketMonoRegular, sans-serif;*/
   font-family: NeueMachinaRegular, sans-serif;
   text-transform: uppercase;
 }

@@ -7,6 +7,7 @@ import OrderProcess from "../../components/OrderProcess/OrderProcess";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
+import { ScrollRestoration } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
       <OrderProcess />
       <ContactUs />
       <Footer />
+      <ScrollRestoration />
     </>
   );
 };

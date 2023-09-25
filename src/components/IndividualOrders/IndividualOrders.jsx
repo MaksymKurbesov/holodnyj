@@ -5,6 +5,7 @@ import Order2 from "../../assets/individual-order2.jpg";
 import Order3 from "../../assets/individual-order3.jpg";
 import Order4 from "../../assets/individual-order4.jpg";
 import { Link } from "react-router-dom";
+import { PROJECTS } from "../../pages/Projects/PROJECTS";
 
 const ORDERS = [
   {
@@ -38,7 +39,7 @@ const IndividualOrders = () => {
         Мы создаем <span>индивидуальные</span> <br /> дизайн-проекты
       </h2>
       <ul className={styles["orders"]}>
-        {ORDERS.map((order, index) => {
+        {PROJECTS.slice(0, 4).map((order, index) => {
           return (
             <li
               key={order.name}

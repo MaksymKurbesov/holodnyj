@@ -11,7 +11,7 @@
 }
 
 .individual-orders h2 span{
-  color: white;
+  color: rgb(248, 248, 248);
   padding: 0 5px;
   background: var(--main-color);
 }
@@ -19,10 +19,7 @@
 .orders {
   display: flex;
   justify-content: center;
-  /*grid-template-columns: repeat(4, 25%);*/
   transition: 0.45s all;
-  /*grid-template-rows: 1fr 1fr;*/
-  /*gap: 15px;*/
 }
 
 .order {
@@ -77,28 +74,14 @@
   transition: 0.35s ease all;
 }
 
-.orders:hover {
-  /*grid-template-columns: 70% 10% 10% 10%;*/
-}
 
 .active {
   width: 100%;
 }
 
 .active:before {
-  /*opacity: 0;*/
   background: rgba(0, 0, 0, 0.8);
 }
-
-/*.order:hover {*/
-/*  width: 100%;*/
-/*}*/
-
-/*.order:hover:before {*/
-/*  opacity: 0;*/
-/*}*/
-
-
 
 .order img {
   position: relative;

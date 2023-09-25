@@ -1,12 +1,14 @@
 .header {
-  padding: 55px 100px;
+  padding: 45px 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /*background: rgba(255, 255, 255, 0.4);*/
 }
 
 .logotype {
-  font-size: 30px;
+  font-size: 36px;
+  /*font-family: DisketMonoBold, 'sans-serif';*/
   z-index: 7;
   transition: 0.45s ease all 0.15s;
 }
@@ -71,7 +73,6 @@
 .isOpenHamburger span {
   background-color: var(--black-color);
 }
-
 
 
 .discuss {

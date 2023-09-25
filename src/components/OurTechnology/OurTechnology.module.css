@@ -8,7 +8,7 @@
   margin-bottom: 70px;
 }
 .our-technology h2 span {
-  color: white;
+  color: var(--light-gray-color);
   background: var(--main-color);
   padding: 0 5px;
 }

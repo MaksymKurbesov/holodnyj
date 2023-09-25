@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Header.module.css";
 import Menu from "../Menu/Menu";
 import Languages from "../Languages/Languages";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const toggleMenu = (status) => {
   if (!status) {
@@ -18,6 +18,11 @@ const toggleMenu = (status) => {
 
 const Header = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    toggleMenu(true);
+  }, [location.pathname]);
 
   return (
     <header className={styles["header"]}>

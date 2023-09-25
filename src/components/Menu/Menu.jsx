@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Menu.module.css";
+import { Link } from "react-router-dom";
 
 const Menu = ({ status }) => {
   return (
@@ -17,10 +18,10 @@ const Menu = ({ status }) => {
           <nav>
             <ul className={`${styles["nav-list"]}`}>
               <li>
-                <a href={"#"}>Главная</a>
+                <Link to={"/"}>Главная</Link>
               </li>
               <li>
-                <a href={"#"}>Проекты</a>
+                <Link to={"/projects"}>Проекты</Link>
               </li>
               <li>
                 <a href={"#"}>В наличие</a>
