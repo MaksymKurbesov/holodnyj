@@ -1,0 +1,81 @@
+.model-wrapper {
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: -87px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--black-color);
+  color: var(--second-color);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: DisketMonoRegular, 'sans-serif';
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.model {
+  display: flex;
+  gap: 100px;
+  margin-bottom: 100px;
+}
+
+.description {
+  padding: 100px 0;
+}
+
+.description span {
+  display: block;
+  font-size: 16px;
+  font-family: NeueMachinaRegular;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.description h3 {
+  font-size: 44px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: var(--main-color);
+}
+
+.description p {
+  max-width: 80%;
+  font-family: NeueMachinaLight;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.gallery {
+  margin-bottom: 200px;
+}
+
+
+.gallery span {
+  display: block;
+  width: 100px;
+  margin: 0 auto 50px;
+  font-size: 16px;
+  font-family: NeueMachinaRegular;
+  font-weight: 600;
+}
+
+
+.slide {
+  width: 100%;
+}
+
+.gallery {
+  :global .slick-slide div {
+    outline: none;
+    padding: 0 10px;
+  }
+
+  :global .slick-slide img {
+    object-fit: cover;
+  }
+
+}

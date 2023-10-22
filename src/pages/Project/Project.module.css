@@ -9,7 +9,7 @@
 
 .back-button {
   position: absolute;
-  top: -96px;
+  top: -87px;
   left: 50%;
   transform: translateX(-50%);
   background: var(--black-color);

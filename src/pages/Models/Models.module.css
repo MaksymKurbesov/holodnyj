@@ -1,0 +1,46 @@
+.models-wrapper {
+  padding: 100px;
+}
+
+.models-wrapper h2 {
+  display: inline-block;
+  padding: 0 5px;
+  position: relative;
+  font-size: 60px;
+  margin-bottom: 80px;
+}
+
+.models-wrapper h2:before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 5px;
+  background: var(--main-color);
+}
+
+.models {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* или вы можете указать конкретные размеры, например, 100px */
+  gap: 100px;
+}
+
+.model {
+  cursor: pointer;
+}
+
+.model h3 {
+  background-color: white;
+  padding: 40px;
+  font-size: 26px;
+  color: var(--main-color);
+  font-weight: 400;
+  transition: 0.35s ease all;
+  text-decoration: underline;
+}
+
+.model:hover h3 {
+  color: rgb(2,2,2);
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Menu.module.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Menu = ({ status }) => {
   return (
@@ -18,22 +18,22 @@ const Menu = ({ status }) => {
           <nav>
             <ul className={`${styles["nav-list"]}`}>
               <li>
-                <Link to={"/"}>Главная</Link>
+                <NavLink to={"/"}>Главная</NavLink>
               </li>
               <li>
-                <Link to={"/projects"}>Проекты</Link>
+                <NavLink to={"/projects"}>Проекты</NavLink>
               </li>
               <li>
-                <a href={"#"}>В наличие</a>
+                <NavLink to={"/in-stock"}>В наличие</NavLink>
               </li>
               <li>
-                <a href={"#"}>Модели</a>
+                <NavLink to={"/models"}>Модели</NavLink>
               </li>
               <li>
-                <a href={"#"}>О нас</a>
+                <NavLink to={"/about-us"}>О нас</NavLink>
               </li>
               <li>
-                <a href={"#"}>Контакты</a>
+                <a href={"/#"}>Контакты</a>
               </li>
             </ul>
           </nav>

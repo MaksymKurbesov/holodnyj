@@ -1,0 +1,83 @@
+.about-us {
+  padding: 50px 100px;
+}
+
+.mini-title {
+  display: block;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.about-us h2 {
+  margin: 0 auto 50px;
+  max-width: 1000px;
+  font-size: 40px;
+  text-align: center;
+  font-family: "Neue Machina Medium", 'sans-serif';
+}
+
+.about-us p {
+  margin: 0 auto;
+  max-width: 900px;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: NeueMachinaLight, 'sans-serif';
+  line-height: 1.8;
+}
+
+
+
+.slider {
+  margin: 120px 0px;
+
+  img {
+    object-fit: cover;
+  }
+
+  //:global .slick-list {
+  //  padding:0 20% 0 0;
+  //}
+
+  :global .slick-slide {
+    padding: 0 15px;
+  }
+
+  :global .slick-slide div {
+    outline: none;
+  }
+}
+
+.slide {
+  width: 100%;
+}
+
+.every-year {
+  margin-bottom: 150px;
+}
+
+.team-members {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  margin-bottom: 120px;
+}
+
+.team-members img {
+  object-fit: cover;
+}
+
+.team-description {
+  margin-bottom: 120px !important;
+}
+
+.partners {
+  background: var(--main-color);
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.partners svg path {
+  fill: rgba(255, 255, 255, 0.4);
+}
