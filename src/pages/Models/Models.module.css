@@ -21,6 +21,33 @@
   background: var(--main-color);
 }
 
+.tab-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 24px;
+  font-family: NeueMachinaLight, 'sans-serif';
+  margin-bottom: 70px;
+}
+
+.tab {
+  width: 100%;
+  text-align: center;
+  padding: 10px 40px;
+  cursor: pointer;
+  transition: 0.35s ease all;
+}
+
+.tab:hover {
+  background: rgba(0, 0, 0, 0.2);;
+  color: rgba(255, 255, 255, 1);
+}
+
+.selected-tab {
+  background: var(--main-color);
+  color: white;
+}
+
 .models {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* или вы можете указать конкретные размеры, например, 100px */

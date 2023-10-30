@@ -21,6 +21,33 @@
     background: var(--main-color);
 }
 
+.tab-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 22px;
+    font-family: NeueMachinaRegular, 'sans-serif';
+    margin-bottom: 70px;
+}
+
+.tab {
+    width: 100%;
+    text-align: center;
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: 0.35s ease all;
+}
+
+.tab:hover {
+    background: rgba(0, 0, 0, 0.2);;
+    color: rgba(255, 255, 255, 1);
+}
+
+.selected-tab {
+    background: var(--main-color);
+    color: white;
+}
+
 .items {
     display: grid;
     grid-template-columns: repeat(5, 1fr);

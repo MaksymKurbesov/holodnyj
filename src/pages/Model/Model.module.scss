@@ -2,6 +2,10 @@
   position: relative;
 }
 
+.model3d-wrapper {
+  position: relative;
+}
+
 .back-button {
   position: absolute;
   top: -87px;
@@ -19,19 +23,33 @@
 }
 
 .model {
-  display: flex;
-  gap: 100px;
+  display: grid;
+  grid-template-columns: 50% 50%;
   margin-bottom: 100px;
+  position: relative;
+}
+
+.instruction {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  z-index: 5;
+  color: black;
+  top: 25px;
+  left: 50%;
+  font-weight: 400;
+  font-family: "Neue Machina Light";
+  transform: translateX(-50%);
 }
 
 .description {
-  padding: 100px 0;
+  padding: 50px 70px;
 }
 
-.description span {
+.description > span {
   display: block;
   font-size: 16px;
-  font-family: NeueMachinaRegular;
+  font-family: NeueMachinaRegular, 'sans-serif';
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -43,25 +61,257 @@
   color: var(--main-color);
 }
 
-.description p {
-  max-width: 80%;
-  font-family: NeueMachinaLight;
+.description > p {
+  font-family: NeueMachinaLight, 'sans-serif';
   color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 50px;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 15px;
+  column-gap: 20px;
+  font-family: NeueMachinaRegular, 'sans-serif';
+  margin-bottom: 15px;
+}
+
+.error-message {
+  display: none;
+  font-family: "Neue Machina Light";
+  color: #ff1c37;
+}
+
+.show-error-message {
+  display: block;
+}
+
+.in-stock-info {
+  font-size: 28px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+
+.overlay-modal > div {
+  z-index: 10;
+  position: relative;
+}
+
+.inputs > div {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--main-color);
+}
+
+.inputs label {
+  margin-bottom: 5px;
+}
+
+.inputs input {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 8px 0;
+  font-family: inherit;
+}
+
+.price {
+  margin-bottom: 50px;
+  color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 70px;
+}
+
+.price span {
+  color: var(--main-color);
+  font-size: 34px;
+}
+
+.calculate-price button {
+  background: var(--main-color);
+  border: none;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-family: "NeueMachinaRegular", 'sans-serif';
+  color: white;
+}
+
+.buy-button {
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+.customOverlay {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.customModal {
+  max-width: 600px !important;
+  width: 100%;
+  font-family: "Neue Machina Light";
+  padding: 40px 50px !important;
+}
+
+
+.customModal > h3 {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.customModal p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.customModal p span {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 400;
+}
+
+.customModal p:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.modal-inputs {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 80px;
+  gap: 40px;
+  margin-bottom: 120px;
+}
+
+.modal-inputs h3 {
+  font-size: 30px;
+}
+
+.modal-inputs > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-inputs label {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.modal-inputs input {
+  border: none;
+  border-bottom: 1px solid var(--main-color);
+  outline: none;
+  padding-bottom: 5px;
+}
+
+
+
+.bill-price span {
+  color: var(--main-color) !important;
+  font-weight: 600 !important;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.modal-buttons button {
+  background: var(--main-color);
+  border: none;
+  padding: 10px 25px;
+  color: white;
+  font-family: "Neue Machina Light";
+  cursor: pointer;
+}
+
+.modal-buttons button:first-child {
+  background: none;
+  border: 1px solid var(--main-color);
+  color: black;
+}
+
+.submit-form-button {
+  cursor: pointer;
+  //background: none !important;
+  //border: 1px solid var(--main-color) !important;
+  //color: var(--main-color) !important;
+  transition: 0.35s ease all;
+}
+
+.success-message {
+  display: none !important;
+  position: absolute;
+  bottom: 55px;
+  border: none !important;
+  font-size: 16px !important;
+  color: #98c54b;
+}
+
+.show-success-message {
+  display: block !important;
+}
+
+.submit-form-button:hover {
+  background: var(--main-color) !important;
+  color: white !important;
 }
 
 .gallery {
   margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
 }
 
 
 .gallery span {
+  text-align: center;
   display: block;
   width: 100px;
-  margin: 0 auto 50px;
+  margin: 0 auto;
   font-size: 16px;
-  font-family: NeueMachinaRegular;
+  font-family: NeueMachinaRegular, 'sans-serif';
   font-weight: 600;
 }
+
+.slider-buttons {
+  display: flex;
+  width: 150px;
+  gap: 20px;
+  margin-left: auto;
+  margin-bottom: 20px;
+  padding-right: 20px;
+}
+
+.slider-buttons button {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid var(--main-color);
+  background-color: transparent;
+}
+
+.prev {
+  background-image: url('../../assets/icons/arrow.svg');
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: center;
+  transform: rotate(-180deg);
+}
+
+.next {
+  background-image: url('../../assets/icons/arrow.svg');
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: center;
+}
+
 
 
 .slide {

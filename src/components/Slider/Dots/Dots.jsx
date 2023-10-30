@@ -23,17 +23,15 @@ const Dots = ({ slidesCount, slideNumber, goToSlide, changeSlide }) => {
 
   return (
     <div className={styles["dots"]}>
-      <div className={styles["arrows"]}>
-        <div
-          className={`${styles["arrow"]} ${styles["left"]}`}
-          onClick={() => changeSlide(-1)}
-        />
-        <div
-          className={`${styles["arrow"]} ${styles["right"]}`}
-          onClick={() => changeSlide(1)}
-        />
-      </div>
+      <div
+        className={`${styles["arrow"]} ${styles["left"]}`}
+        onClick={() => changeSlide(-1)}
+      />
       {renderDots()}
+      <div
+        className={`${styles["arrow"]} ${styles["right"]}`}
+        onClick={() => changeSlide(1)}
+      />
     </div>
   );
 };

@@ -1,34 +1,7 @@
 import React, { useState } from "react";
 import styles from "./IndividualOrders.module.css";
-import Order1 from "../../assets/individual-order1.jpg";
-import Order2 from "../../assets/individual-order2.jpg";
-import Order3 from "../../assets/individual-order3.jpg";
-import Order4 from "../../assets/individual-order4.jpg";
 import { Link } from "react-router-dom";
-import { PROJECTS } from "../../pages/Projects/PROJECTS";
-
-const ORDERS = [
-  {
-    name: "Garden Resto BAR",
-    image: Order1,
-    link: "garden-resto-bar",
-  },
-  {
-    name: "Noble Brew",
-    image: Order2,
-    link: "noble-brew",
-  },
-  {
-    name: "PRIRODA",
-    image: Order3,
-    link: "priroda",
-  },
-  {
-    name: "Старая Прага",
-    image: Order4,
-    link: "old_prague",
-  },
-];
+import { PROJECTS } from "../../pages/Projects/PROJECTS.js";
 
 const IndividualOrders = () => {
   const [activeOrder, setActiveOrder] = useState(1);

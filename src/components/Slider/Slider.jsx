@@ -60,14 +60,12 @@ const Slider = () => {
       onTouchMove={handleTouchMove}
     >
       <SlidesList slides={SLIDES} slideNumber={currentSlide} />
-      <div className={styles["dots-wrapper"]}>
-        <Dots
-          slidesCount={SLIDES.length}
-          slideNumber={currentSlide}
-          goToSlide={goToSlide}
-          changeSlide={changeSlide}
-        />
-      </div>
+      <Dots
+        slidesCount={SLIDES.length}
+        slideNumber={currentSlide}
+        goToSlide={goToSlide}
+        changeSlide={changeSlide}
+      />
     </div>
   );
 };

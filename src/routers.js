@@ -35,4 +35,8 @@ export const ROUTERS = [
     path: "/in-stock",
     element: <InStock />,
   },
+  {
+    path: "/in-stock/:modelName",
+    element: <Model />,
+  },
 ];

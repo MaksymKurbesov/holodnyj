@@ -24,13 +24,13 @@ const Menu = ({ status }) => {
                 <NavLink to={"/projects"}>Проекты</NavLink>
               </li>
               <li>
-                <NavLink to={"/in-stock"}>В наличие</NavLink>
-              </li>
-              <li>
                 <NavLink to={"/models"}>Модели</NavLink>
               </li>
               <li>
                 <NavLink to={"/about-us"}>О нас</NavLink>
+              </li>
+              <li>
+                <NavLink to={"/in-stock"}>В наличие</NavLink>
               </li>
               <li>
                 <a href={"/#"}>Контакты</a>

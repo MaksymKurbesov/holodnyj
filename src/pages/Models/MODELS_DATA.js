@@ -10,30 +10,36 @@ export const MODELS_DATA = [
     name: "Exclusive 51P",
     image: Model1,
     link: "exclusive-51p",
+    type: "pastry",
   },
   {
     name: "I-Glass Vertical",
     image: Model2,
     link: "i-glass-vertical",
+    type: "pastry",
   },
   {
     name: "Brilliant",
     image: Model3,
     link: "brilliant",
+    type: "pastry",
   },
   {
     name: "Exclusive 74P",
     image: Model4,
     link: "exclusive-74p",
+    type: "gastronomic",
   },
   {
     name: "Exclusive 74S",
     image: Model5,
     link: "exclusive-74s",
+    type: "gastronomic",
   },
   {
     name: "Islandzero",
     image: Model6,
     link: "islandzero",
+    type: "gastronomic",
   },
 ];
