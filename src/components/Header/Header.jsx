@@ -16,6 +16,16 @@ const toggleMenu = (status) => {
   }
 };
 
+const toggleMenuOnMobile = (status) => {
+  if (!status) {
+    document.body.style.overflow = "hidden";
+  } else {
+    setTimeout(() => {
+      document.body.style.overflow = "visible";
+    }, 300);
+  }
+};
+
 const Header = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const location = useLocation();
@@ -25,33 +35,38 @@ const Header = () => {
   }, [location.pathname]);
 
   return (
-    <header className={styles["header"]}>
-      <Link
-        to={"/"}
-        className={`${styles["logotype"]} ${
-          menuIsOpen && styles["isOpenLogotype"]
-        }`}
-      >
-        LOGOTYPE
-      </Link>
-      <Languages status={menuIsOpen} />
-      <button className={styles["discuss"]}>Обсудить проект</button>
-      <div
-        className={`${styles["hamburger"]} ${
-          menuIsOpen && styles["isOpenHamburger"]
-        }`}
-        onClick={() => {
-          setMenuIsOpen(!menuIsOpen);
-
-          toggleMenu(menuIsOpen);
-        }}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <Menu status={menuIsOpen} />
-    </header>
+    <div className={"container"}>
+      <header className={styles["header"]}>
+        <Link
+          to={"/"}
+          className={`${styles["logotype"]} ${
+            menuIsOpen && styles["isOpenLogotype"]
+          }`}
+        >
+          LOGOTYPE
+        </Link>
+        <Languages status={menuIsOpen} />
+        <button className={styles["discuss"]}>Обсудить проект</button>
+        <div
+          className={`${styles["hamburger"]} ${
+            menuIsOpen && styles["isOpenHamburger"]
+          }`}
+          onClick={() => {
+            setMenuIsOpen(!menuIsOpen);
+            if (window.innerWidth <= 1000) {
+              toggleMenuOnMobile(menuIsOpen);
+            } else {
+              toggleMenu(menuIsOpen);
+            }
+          }}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <Menu status={menuIsOpen} />
+      </header>
+    </div>
   );
 };
 

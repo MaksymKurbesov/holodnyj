@@ -19,7 +19,6 @@
   color: var(--black-color);
 }
 
-
 .arrow {
   border: none;
   display: flex;
@@ -36,7 +35,7 @@
 }
 
 .left {
-  background-image: url('../../../assets/icons/arrow.svg');
+  background-image: url("../../../assets/icons/arrow.svg");
   background-repeat: no-repeat;
   background-size: 15px 15px;
   background-position: center;
@@ -44,8 +43,31 @@
 }
 
 .right {
-  background-image: url('../../../assets/icons/arrow.svg');
+  background-image: url("../../../assets/icons/arrow.svg");
   background-repeat: no-repeat;
   background-size: 15px 15px;
   background-position: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .dots {
+    padding: 50px 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .dots {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .dots {
+    font-size: 14px;
+  }
+
+  .arrow {
+    width: 30px;
+    height: 30px;
+  }
 }

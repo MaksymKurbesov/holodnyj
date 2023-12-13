@@ -5,11 +5,8 @@ import Image from "../../assets/contact-us.jpg";
 const ContactUs = () => {
   return (
     <div className={styles["contact-us"]}>
-      {/*<h2>*/}
-      {/*  <span>Связаться</span> с нами*/}
-      {/*</h2>*/}
       <div className={styles["contact-wrapper"]}>
-        <img src={Image} alt={""} width={"35%"} />
+        <img src={Image} alt={""} width={"100%"} height={"100%"} />
         <div className={styles["text"]}>
           <h3>Остались вопросы?</h3>
           <p>

@@ -1,5 +1,5 @@
 .about-us {
-  padding: 50px 100px;
+  padding: 50px 5.3vw;
 }
 
 .mini-title {
@@ -11,7 +11,7 @@
 .about-us h2 {
   margin: 0 auto 50px;
   max-width: 1000px;
-  font-size: 40px;
+  font-size: clamp(1.25rem, 0.9466rem + 1.2945vw, 2.5rem);
   text-align: center;
   font-family: "Neue Machina Medium", 'sans-serif';
 }
@@ -34,10 +34,6 @@
     object-fit: cover;
   }
 
-  //:global .slick-list {
-  //  padding:0 20% 0 0;
-  //}
-
   :global .slick-slide {
     padding: 0 15px;
   }
@@ -56,8 +52,9 @@
 }
 
 .team-members {
-  display: flex;
-  gap: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3vw;
   justify-content: center;
   margin-bottom: 120px;
 }
@@ -72,12 +69,57 @@
 
 .partners {
   background: var(--main-color);
-  padding: 50px;
+  padding: 2.5vw;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .partners svg path {
   fill: rgba(255, 255, 255, 0.4);
+}
+
+
+@media screen and (max-width: 768px) {
+  .about-us h2 {
+    margin: 0 auto 20px;
+  }
+
+  .about-us p {
+    font-size: 16px;
+  }
+
+  .mini-title {
+    margin: 0 auto 20px;
+  }
+
+  .slider {
+    margin: 60px 0;
+  }
+
+  .every-year {
+    margin-bottom: 75px;
+  }
+
+  .team-members {
+    margin-bottom: 70px;
+  }
+
+  .partners {
+    svg {
+      width: 30%;
+    }
+  }
+
+  .team-description {
+    margin-bottom: 40px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .slider img {
+    height: 250px;
+  }
 }

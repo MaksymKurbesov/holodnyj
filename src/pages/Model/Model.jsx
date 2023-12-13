@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./Model.module.scss";
 import { Link, useLocation } from "react-router-dom";
 import Header from "../../components/Header/Header";
@@ -11,13 +11,16 @@ import Gallery4 from "../../assets/models/gallery4.jpg";
 import Gallery5 from "../../assets/models/gallery5.jpg";
 import Gallery6 from "../../assets/models/gallery6.jpg";
 import Gallery7 from "../../assets/models/gallery7.jpg";
-import Model3D from "./Model3D";
 import { IN_STOCK_DATA } from "../InStock/IN_STOCK_DATA";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import axios from "axios";
+import { images } from "../../components/ImageSpinner/firstModel";
+import ThreeSixty from "@mladenilic/threesixty.js";
+import WatchImage from "../../assets/watch3.jpg";
+import CssSprite from "../../assets/css_sprites.png";
 
-const TELEGRAM_URL = `https://api.telegram.org/bot6143932905:AAFwzJ3pQGGMGVIRIbR7UlGua-NCzVXXgHg/sendMessage`;
+export const TELEGRAM_URL = `https://api.telegram.org/bot6143932905:AAFwzJ3pQGGMGVIRIbR7UlGua-NCzVXXgHg/sendMessage`;
 
 const TYPE_MAP = {
   pastry: "Кондитерская",
@@ -52,6 +55,9 @@ const Model = () => {
     (model) => model.link === location.pathname.split("/")[2]
   );
 
+  const threeSixtyRef = useRef(null);
+  const threeSixtyListRef = useRef(null);
+
   const [userName, setUserName] = useState("");
   const [userContact, setUserContact] = useState("");
 
@@ -70,6 +76,21 @@ const Model = () => {
   const [shelves, setShelves] = useState(isInStock ? model.shelves : "");
 
   const [modalIsOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const threesixty = new ThreeSixty(threeSixtyRef.current, {
+      image: WatchImage,
+      width: "100%",
+      height: 1000,
+      count: 60,
+      perRow: 4,
+      speed: 100,
+    });
+
+    return () => {
+      threesixty.destroy();
+    };
+  }, []);
 
   const openModal = () => {
     setIsOpen(true);
@@ -127,7 +148,15 @@ const Model = () => {
             <span className={styles["instruction"]}>
               Вертите и приближайте модель, используя мышь или пальцы
             </span>
-            <Model3D />
+            <div className={styles["threesixty"]} ref={threeSixtyRef}></div>
+            {/*<ThreeSixty*/}
+            {/*  amount={36}*/}
+            {/*  imagePath="../../assets/models/1/"*/}
+            {/*  fileName="1-100_{index}.jpg"*/}
+            {/*/>*/}
+
+            {/*<ImageSpinner images={images} />*/}
+            {/*<Model3D />*/}
           </div>
 
           <div className={styles["description"]}>

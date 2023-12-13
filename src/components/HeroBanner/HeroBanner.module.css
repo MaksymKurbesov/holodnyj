@@ -1,7 +1,7 @@
 .hero-banner {
   display: flex;
   justify-content: space-between;
-  padding: 100px;
+  padding: 100px 0;
   position: relative;
   overflow: hidden;
   z-index: 3;
@@ -13,8 +13,7 @@
 }
 
 .main-text {
-  font-size: 70px;
-  /*max-width: 480px;*/
+  font-size: clamp(1.5rem, 1rem + 3vw, 4.75rem);
   line-height: 1.1;
   margin-bottom: 60px;
 }
@@ -52,57 +51,9 @@
   z-index: 10;
 }
 
-
 .fridge-features span {
   font-size: 30px;
 }
-
-
-/*.buttons {*/
-/*  position: relative;*/
-/*  right: -50px;*/
-/*  z-index: 10;*/
-/*}*/
-
-/*.buttons button {*/
-/*  border: none;*/
-/*  display: flex;*/
-/*  justify-content: center;*/
-/*  align-items: center;*/
-/*  border-radius: 50%;*/
-/*  background: var(--dark-gray-color);*/
-/*  width: 40px;*/
-/*  height: 40px;*/
-/*}*/
-
-/*.dots {*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  align-items: center;*/
-/*  font-size: 20px;*/
-/*  padding: 40px 0;*/
-/*  gap: 40px;*/
-/*  color: rgba(0, 0, 0, 0.5);*/
-/*}*/
-
-/*.active-dot {*/
-/*  color: var(--black-color);*/
-/*}*/
-
-/*.buttons svg {*/
-/*  fill: var(--black-color);*/
-/*}*/
-
-/*.buttons button:first-child svg {*/
-/*  fill: rgba(0, 0, 0, 0.3);*/
-/*  transform: rotateZ(-90deg);*/
-/*}*/
-
-/*.buttons button:last-child svg {*/
-/*  transform: rotateZ(90deg);*/
-/*}*/
-
-
 
 .features-wrapper {
   position: absolute;
@@ -117,7 +68,6 @@
   justify-content: space-between;
   /*background: var(--main-color);*/
   width: 50vw;
-
 }
 
 .features li {
@@ -128,7 +78,7 @@
 }
 
 .features li:not(:last-child):before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -143,3 +93,38 @@
   color: var(--main-color);
 }
 
+.mobile-text {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .hero-banner {
+    flex-direction: column;
+    padding: 0;
+    padding-top: 50px;
+  }
+
+  .desktop-text {
+    display: none;
+  }
+
+  .mobile-text {
+    display: block;
+    text-align: center;
+    font-size: clamp(1.5rem, 1rem + 3.2vw, 4.75rem);
+  }
+
+  .fridge-wrapper {
+    margin: 0 auto;
+  }
+
+  .subtext {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .fridge-wrapper {
+    margin: initial;
+  }
+}

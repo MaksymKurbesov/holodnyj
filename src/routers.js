@@ -5,6 +5,7 @@ import AboutUs from "./pages/AboutUs/AboutUs";
 import Models from "./pages/Models/Models";
 import Model from "./pages/Model/Model";
 import InStock from "./pages/InStock/InStock";
+import Contacts from "./pages/Contacts/Contacts";
 
 export const ROUTERS = [
   {
@@ -38,5 +39,9 @@ export const ROUTERS = [
   {
     path: "/in-stock/:modelName",
     element: <Model />,
+  },
+  {
+    path: "/contacts",
+    element: <Contacts />,
   },
 ];

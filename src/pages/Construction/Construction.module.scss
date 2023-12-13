@@ -1,0 +1,99 @@
+.construction {
+    padding: 50px 20px;
+    max-width: 600px;
+    margin:0 auto;
+    font-family: "Neue Machina Light";
+}
+
+.construction h2 {
+    font-size: 40px;
+    font-family: "Neue Machina";
+    text-align: center;
+    color: #405b91;
+    margin-bottom: 40px;
+}
+
+.links {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.links a {
+    display: flex;
+    align-items: center;
+}
+
+.links svg {
+    margin-right: 15px;
+}
+
+.construction > p {
+    color: #405b91;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.construction form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.construction form button {
+    margin-top: 15px;
+    background: #405b91;
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 1s ease all;
+}
+
+.construction form button:disabled {
+    background: red;
+}
+
+.send {
+    background: #5cb85c !important;
+    cursor: not-allowed !important;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+.input label {
+    color: rgb(168, 168, 168);
+    margin-bottom: 5px;
+}
+
+.input input, .input textarea {
+    font-size: 16px;
+    font-family: "Neue Machina Light";
+    font-weight: 600;
+    border-radius: 5px;
+    border: 1px solid #cecece;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    background: white;
+    color: #595959;
+    //border-bottom: 2px solid rgb(168, 168, 168);
+}
+
+.image {
+    width: 100%;
+    margin: 0 auto 60px;
+}
+
+
+@media screen and (max-width: 420px) {
+    .links {
+        font-size: 14px;
+    }
+}

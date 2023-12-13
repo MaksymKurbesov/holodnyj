@@ -1,8 +1,3 @@
-.contact-us {
-  /*padding: 0 100px;*/
-  /*margin-bottom: 150px;*/
-}
-
 .contact-us h2 {
   font-size: 60px;
   margin-bottom: 70px;
@@ -13,29 +8,33 @@
 }
 
 .contact-wrapper {
-  display: flex;
-  /*max-width: 900px;*/
-  margin: 0 auto;
-  background: var(--main-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 800px;
 }
 
-
 .contact-wrapper h3 {
-  font-size: 70px;
+  font-size: clamp(1.5rem, 1rem + 4vw, 4.75rem);
   color: white;
   margin-bottom: 20px;
   font-family: NeueMachinaUltraBold;
 }
 
+.contact-wrapper img {
+  object-fit: cover;
+}
+
 .contact-wrapper p {
-  font-family: NeueMachinaLight, 'sans-serif';
+  font-family: NeueMachinaLight, "sans-serif";
   font-size: 20px;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 80px;
 }
 
 .text {
-  padding: 70px 100px;
+  width: 100%;
+  padding: 50px;
+  background: var(--main-color);
 }
 
 .inputs-wrapper {
@@ -54,7 +53,6 @@
   padding-top: 40px;
   padding-bottom: 10px;
   margin-bottom: 30px;
-  /*height: 70px;*/
   background: none;
   border: none;
   border-bottom: 2px solid rgba(255, 255, 255, 0.4);
@@ -64,8 +62,6 @@
   outline: none;
   transition: 0.35s ease all;
 }
-
-
 
 .input label {
   position: absolute;
@@ -82,13 +78,39 @@
   border-bottom: 2px solid rgba(255, 255, 255, 1);
 }
 
-
 .send-button {
-  width: 350px;
   background: white;
   border: none;
   padding: 10px 35px;
   border-radius: 20px;
   font-family: NeueMachinaRegular, sans-serif;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 1100px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .contact-wrapper img {
+    display: none;
+  }
+
+  .text {
+    padding: 40px 5.3vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact-wrapper p {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .contact-us input {
+    padding-top: 40px;
+    padding-bottom: 5px;
+    font-size: 16px;
+  }
 }

@@ -4,7 +4,17 @@
 
 .model3d-wrapper {
   position: relative;
+  height: 100%;
 }
+
+.threesixty {
+  //width: 100% !important;
+  height: 100%;
+  //user-select: none;
+  //background-size: contain;
+  //background-repeat: no-repeat;
+}
+
 
 .back-button {
   position: absolute;

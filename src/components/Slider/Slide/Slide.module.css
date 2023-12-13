@@ -6,7 +6,7 @@
 .slide-image {
   display: flex;
   margin: 0 auto;
-  max-height: 600px;
+  max-height: 40vw;
   /*width: 100%;*/
   object-fit: contain;
 }
@@ -14,4 +14,10 @@
 .slide-title {
   text-align: center;
   margin-top: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .slide-image {
+    /*max-height: 420px;*/
+  }
 }

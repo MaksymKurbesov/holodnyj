@@ -1,17 +1,17 @@
 .models-wrapper {
-  padding: 100px;
+  padding: 50px 5.3vw;
 }
 
 .models-wrapper h2 {
   display: inline-block;
   padding: 0 5px;
   position: relative;
-  font-size: 60px;
+  font-size: clamp(1.5rem, 1rem + 3.5vw, 3.75rem);
   margin-bottom: 80px;
 }
 
 .models-wrapper h2:before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -5px;
   left: 50%;
@@ -24,9 +24,9 @@
 .tab-list {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 3vw;
   font-size: 24px;
-  font-family: NeueMachinaLight, 'sans-serif';
+  font-family: NeueMachinaLight, "sans-serif";
   margin-bottom: 70px;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .tab:hover {
-  background: rgba(0, 0, 0, 0.2);;
+  background: rgba(0, 0, 0, 0.2);
   color: rgba(255, 255, 255, 1);
 }
 
@@ -50,24 +50,63 @@
 
 .models {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* или вы можете указать конкретные размеры, например, 100px */
-  gap: 100px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 3vw;
 }
 
 .model {
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 
 .model h3 {
   background-color: white;
-  padding: 40px;
-  font-size: 26px;
+  padding: 3vw;
+  font-size: clamp(1rem, 0.8rem + 0.6vw, 2rem);
   color: var(--main-color);
   font-weight: 400;
   transition: 0.35s ease all;
   text-decoration: underline;
 }
 
+.model img {
+  height: 100%;
+}
+
 .model:hover h3 {
-  color: rgb(2,2,2);
+  color: rgb(2, 2, 2);
+}
+
+@media screen and (max-width: 1000px) {
+  .tab-list {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .models-wrapper h2 {
+    margin-bottom: 40px;
+  }
+
+  .tab-list {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .tab {
+    padding: 10px;
+  }
+
+  .tab span {
+    display: block;
+    max-width: 135px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .tab-list {
+    font-size: 14px;
+  }
 }

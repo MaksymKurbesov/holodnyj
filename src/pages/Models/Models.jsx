@@ -18,13 +18,13 @@ const Models = () => {
               selectedClassName={styles["selected-tab"]}
               className={styles["tab"]}
             >
-              Кондитерские витрины
+              <span>Кондитерские витрины</span>
             </Tab>
             <Tab
               selectedClassName={styles["selected-tab"]}
               className={styles["tab"]}
             >
-              Гастрономические витрины
+              <span>Гастрономические витрины</span>
             </Tab>
           </TabList>
 

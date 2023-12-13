@@ -1,5 +1,3 @@
-
-
 @font-face {
   font-family: "DisketMonoRegular";
   font-weight: 400;
@@ -32,8 +30,6 @@
   src: url("assets/fonts/NeueMachina-Ultrabold.woff2") format("woff2");
 }
 
-
-
 :root {
   --main-color: #d09882;
   --second-color: rgb(244, 245, 248);
@@ -50,15 +46,19 @@
 }
 
 html {
-  font-family: DisketMonoRegular, 'sans-serif';
+  font-family: DisketMonoRegular, "sans-serif";
   font-weight: 600;
   color: var(--black-color);
   position: relative;
   background: var(--gray-color);
 }
 
+body {
+  font-family: DisketMonoRegular, "sans-serif" !important;
+}
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -68,5 +68,5 @@ a {
 }
 
 .container {
-
+  padding: 0 5.3vw;
 }

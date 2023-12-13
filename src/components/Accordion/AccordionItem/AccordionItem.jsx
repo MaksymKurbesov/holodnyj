@@ -14,7 +14,7 @@ const AccordionItem = ({ title, content, className, step }) => {
       style={
         isOpen
           ? { height: contentEl.current?.scrollHeight + 100 }
-          : { height: "80px" }
+          : { height: "70px" }
       }
     >
       <div className={styles["title"]}>

@@ -1,12 +1,12 @@
 .in-stock {
-    padding: 100px;
+    padding: 50px 5.3vw;
 }
 
 .in-stock h2 {
     display: inline-block;
     padding: 0 5px;
     position: relative;
-    font-size: 60px;
+    font-size: clamp(1.5rem, 1rem + 3.5vw, 3.75rem);
     margin-bottom: 80px;
 }
 
@@ -24,7 +24,7 @@
 .tab-list {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 3vw;
     font-size: 22px;
     font-family: NeueMachinaRegular, 'sans-serif';
     margin-bottom: 70px;
@@ -49,15 +49,16 @@
 }
 
 .items {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    column-gap: 70px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+    gap: 3vw;
     row-gap: 40px;
 }
 
 .items li {
     padding: 20px;
     background: white;
+
 
     img {
         margin-bottom: 20px;
@@ -88,4 +89,41 @@
 
 .price path {
     fill: white;
+}
+
+@media screen and (max-width: 1000px) {
+    .tab-list {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .in-stock h2 {
+        margin-bottom: 40px;
+    }
+
+    .models {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tab-list {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .tab {
+        padding: 10px;
+    }
+
+    .tab span {
+        display: block;
+        max-width: 135px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .tab-list {
+        font-size: 14px;
+    }
 }

@@ -8,10 +8,12 @@ import ContactUs from "../../components/ContactUs/ContactUs";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import { ScrollRestoration } from "react-router-dom";
+import Construction from "../Construction/Construction";
 
 const Index = () => {
   return (
     <>
+      {/*<Construction />*/}
       <Header />
       <HeroBanner />
       <WeOffer />

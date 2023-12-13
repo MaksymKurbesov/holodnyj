@@ -33,7 +33,7 @@ const Menu = ({ status }) => {
                 <NavLink to={"/in-stock"}>В наличие</NavLink>
               </li>
               <li>
-                <a href={"/#"}>Контакты</a>
+                <NavLink to={"/contacts"}>Контакты</NavLink>
               </li>
             </ul>
           </nav>

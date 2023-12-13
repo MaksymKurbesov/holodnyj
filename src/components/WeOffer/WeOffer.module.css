@@ -5,7 +5,7 @@
   column-gap: 50px;
   align-items: center;
   margin-bottom: 150px;
-  padding: 100px;
+  padding: 40px 5.3vw;
   color: var(--light-gray-color);
 }
 
@@ -15,7 +15,7 @@
 }
 
 .text {
-  font-family: "NeueMachinaRegular", 'sans-serif';
+  font-family: "NeueMachinaRegular", "sans-serif";
   font-size: 22px;
   font-weight: 400;
   line-height: 1.5;
@@ -23,15 +23,13 @@
 
 .text span {
   font-weight: 600;
-  font-family: "NeueMachinaRegular", 'sans-serif';
+  font-family: "NeueMachinaRegular", "sans-serif";
 }
-
 
 .statistic-wrapper {
   display: grid;
   grid-template-columns: repeat(3, max-content);
 }
-
 
 .statistic {
   position: relative;
@@ -50,7 +48,7 @@
 }
 
 .statistic:not(:last-child):before {
-  content: '';
+  content: "";
   letter-spacing: 3px;
   position: absolute;
   top: 50%;
@@ -63,14 +61,101 @@
 
 .statistic span {
   font-size: 70px;
-  font-family: "NeueMachinaUltraBold", 'sans-serif';
+  font-family: "NeueMachinaUltraBold", "sans-serif";
   font-weight: 400;
-
 }
 
 .statistic p {
-  font-family: "NeueMachinaLight", 'sans-serif';
+  font-family: "NeueMachinaLight", "sans-serif";
   font-size: 18px;
   font-weight: 400;
+}
 
+@media screen and (max-width: 1600px) {
+  .we-offer {
+    grid-template-columns: 1fr;
+  }
+
+  .statistic-wrapper {
+    margin-bottom: 35px;
+    justify-content: center;
+  }
+
+  .text {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .statistic span {
+    font-size: 50px;
+  }
+
+  .text {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .we-offer {
+    margin-bottom: 75px;
+  }
+
+  .statistic:nth-child(1) {
+    padding-right: 25px;
+  }
+
+  .statistic:nth-child(2) {
+    padding: 0 25px;
+  }
+
+  .statistic:nth-child(3) {
+    padding-left: 25px;
+  }
+
+  .statistic span {
+    font-size: 40px;
+  }
+
+  .statistic p {
+    font-size: 14px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .statistic-wrapper {
+    grid-template-columns: 1fr;
+    border-bottom: 2px solid white;
+    padding-bottom: 35px;
+  }
+
+  .statistic {
+    justify-self: center;
+    text-align: center;
+  }
+
+  .statistic:nth-child(1) {
+    padding-right: 0;
+  }
+
+  .statistic:nth-child(2) {
+    padding: 0;
+  }
+
+  .statistic:nth-child(3) {
+    padding-left: 0;
+  }
+
+  .statistic:not(:last-child):before {
+    content: none;
+  }
+
+  .statistic span {
+    font-size: 55px;
+  }
 }

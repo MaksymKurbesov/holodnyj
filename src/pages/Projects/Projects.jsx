@@ -4,6 +4,7 @@ import Header from "../../components/Header/Header";
 import { PROJECTS } from "./PROJECTS.js";
 import { Link, ScrollRestoration } from "react-router-dom";
 import { ReactComponent as MoreIcon } from "../../assets/icons/more.svg";
+import Footer from "../../components/Footer/Footer";
 
 const Projects = () => {
   return (
@@ -36,7 +37,7 @@ const Projects = () => {
           })}
         </ul>
       </div>
-
+      <Footer />
       <ScrollRestoration />
     </section>
   );

@@ -16,10 +16,22 @@ import { ReactComponent as Partner3 } from "../../assets/partners/3.svg";
 import { ReactComponent as Partner4 } from "../../assets/partners/4.svg";
 import { ReactComponent as Partner5 } from "../../assets/partners/5.svg";
 
+const getSlidesCount = (windowWidth) => {
+  if (windowWidth < 768) {
+    return 1;
+  }
+
+  if (windowWidth < 1300) {
+    return 2;
+  }
+
+  return 3;
+};
+
 const AboutUs = () => {
   const settings = {
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: getSlidesCount(window.innerWidth),
     slidesToScroll: 1,
     infinite: false,
   };
@@ -87,15 +99,15 @@ const AboutUs = () => {
           <span className={styles["mini-title"]}>Наша команда</span>
           <div className={styles["team-members"]}>
             <div>
-              <img src={TeamMember2} alt={""} width={400} height={600} />
+              <img src={TeamMember2} alt={""} width={"100%"} height={"100%"} />
               <p>Bill Dawson</p>
             </div>
             <div>
-              <img src={TeamMember1} alt={""} width={400} height={600} />
+              <img src={TeamMember1} alt={""} width={"100%"} height={"100%"} />
               <p>Emilie Farley</p>
             </div>
             <div>
-              <img src={TeamMember3} alt={""} width={400} height={600} />
+              <img src={TeamMember3} alt={""} width={"100%"} height={"100%"} />
               <p>Alexandros Haines</p>
             </div>
           </div>

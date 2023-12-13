@@ -22,12 +22,16 @@
   font-weight: 600;
 }
 
+.title > p {
+  padding-right: 25px;
+}
+
 .content {
   font-size: 18px;
   line-height: 30px;
   color: rgba(0, 0, 0, 0.7);
   padding: 0 50px 0 140px;
-  font-family: NeueMachinaLight, 'sans-serif';
+  font-family: NeueMachinaLight, "sans-serif";
 }
 
 .count {
@@ -39,7 +43,7 @@
 }
 
 .accordion-item:before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 133px;
@@ -60,4 +64,24 @@
 .isOpen {
   transform: rotateZ(45deg);
   color: var(--main-color);
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    font-size: 18px;
+  }
+
+  .content {
+    font-size: 16px;
+    padding: 0;
+  }
+
+  .count {
+    font-size: 24px;
+    margin-right: 45px;
+  }
+
+  .icon {
+    font-size: 22px;
+  }
 }
