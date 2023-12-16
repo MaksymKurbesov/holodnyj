@@ -15,10 +15,8 @@ import { IN_STOCK_DATA } from "../InStock/IN_STOCK_DATA";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import axios from "axios";
-import { images } from "../../components/ImageSpinner/firstModel";
 import ThreeSixty from "@mladenilic/threesixty.js";
 import WatchImage from "../../assets/watch3.jpg";
-import CssSprite from "../../assets/css_sprites.png";
 
 export const TELEGRAM_URL = `https://api.telegram.org/bot6143932905:AAFwzJ3pQGGMGVIRIbR7UlGua-NCzVXXgHg/sendMessage`;
 
@@ -37,16 +35,36 @@ const IMAGES = [
   Gallery7,
 ];
 
-const settings = {
-  speed: 700,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  infinite: true,
-  dots: true,
-  arrows: false,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  cssEase: "linear",
+const calculateThreeSixtyWidth = (windowWidth) => {
+  if (windowWidth <= 420) {
+    return 320;
+  }
+
+  if (windowWidth <= 900) {
+    return 375;
+  }
+
+  if (windowWidth <= 1250) {
+    return 450;
+  }
+
+  if (windowWidth <= 1500) {
+    return 550;
+  }
+
+  return 750;
+};
+
+const calculateSlides = (windowWidth) => {
+  if (windowWidth <= 550) {
+    return 1;
+  }
+
+  if (windowWidth <= 800) {
+    return 2;
+  }
+
+  return 3;
 };
 
 const Model = () => {
@@ -55,8 +73,19 @@ const Model = () => {
     (model) => model.link === location.pathname.split("/")[2]
   );
 
+  const settings = {
+    speed: 700,
+    slidesToShow: calculateSlides(window.innerWidth),
+    slidesToScroll: 1,
+    infinite: true,
+    dots: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+  };
+
   const threeSixtyRef = useRef(null);
-  const threeSixtyListRef = useRef(null);
 
   const [userName, setUserName] = useState("");
   const [userContact, setUserContact] = useState("");
@@ -80,8 +109,8 @@ const Model = () => {
   useEffect(() => {
     const threesixty = new ThreeSixty(threeSixtyRef.current, {
       image: WatchImage,
-      width: "100%",
-      height: 1000,
+      width: calculateThreeSixtyWidth(window.innerWidth),
+      height: calculateThreeSixtyWidth(window.innerWidth),
       count: 60,
       perRow: 4,
       speed: 100,
@@ -141,27 +170,24 @@ const Model = () => {
           to={isInStock ? "/in-stock" : "/models"}
           className={styles["back-button"]}
         >
-          {isInStock ? "Назад в наличие" : "Назад к моделям"}
+          {isInStock ? "Назад" : "Назад"}
         </Link>
         <div className={styles["model"]}>
           <div className={styles["model3d-wrapper"]}>
+            {window.innerWidth <= 700 && <h3>{model.name}</h3>}
             <span className={styles["instruction"]}>
-              Вертите и приближайте модель, используя мышь или пальцы
+              Вертите модель, используя мышь или пальцы
             </span>
             <div className={styles["threesixty"]} ref={threeSixtyRef}></div>
-            {/*<ThreeSixty*/}
-            {/*  amount={36}*/}
-            {/*  imagePath="../../assets/models/1/"*/}
-            {/*  fileName="1-100_{index}.jpg"*/}
-            {/*/>*/}
-
-            {/*<ImageSpinner images={images} />*/}
-            {/*<Model3D />*/}
           </div>
 
           <div className={styles["description"]}>
-            <span>Название</span>
-            <h3>{model.name}</h3>
+            {window.innerWidth > 700 && (
+              <>
+                <span>Название</span>
+                <h3>{model.name}</h3>
+              </>
+            )}
             <span>Описание</span>
             <p>
               Витрины FLAT разработаны и оформлены в соответствии с новой

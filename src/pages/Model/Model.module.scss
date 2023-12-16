@@ -5,14 +5,9 @@
 .model3d-wrapper {
   position: relative;
   height: 100%;
-}
-
-.threesixty {
-  //width: 100% !important;
-  height: 100%;
-  //user-select: none;
-  //background-size: contain;
-  //background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -35,7 +30,7 @@
 .model {
   display: grid;
   grid-template-columns: 50% 50%;
-  margin-bottom: 100px;
+  margin-bottom: 5.3vw;
   position: relative;
 }
 
@@ -45,7 +40,7 @@
   position: absolute;
   z-index: 5;
   color: black;
-  top: 25px;
+  top: 200px;
   left: 50%;
   font-weight: 400;
   font-family: "Neue Machina Light";
@@ -53,7 +48,7 @@
 }
 
 .description {
-  padding: 50px 70px;
+  padding: 50px 4vw;
 }
 
 .description > span {
@@ -65,7 +60,7 @@
 }
 
 .description h3 {
-  font-size: 44px;
+  font-size: clamp(1.5rem, 1rem + 1.25vw, 2.75rem);
   font-weight: 600;
   margin-bottom: 40px;
   color: var(--main-color);
@@ -273,7 +268,7 @@
 }
 
 .gallery {
-  margin-bottom: 200px;
+  margin-bottom: 10vw;
   display: flex;
   flex-direction: column;
 }
@@ -337,5 +332,116 @@
   :global .slick-slide img {
     object-fit: cover;
   }
-
 }
+
+@media screen and (max-width: 1500px) {
+  .instruction {
+    top: 300px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .model {
+    display: block;
+  }
+
+  .model3d-wrapper {
+    align-items: flex-start;
+    padding-top: 50px;
+    float: left;
+    margin: 2vw 4vw;
+
+  }
+
+  .instruction {
+    top: 25px;
+  }
+
+  .back-button {
+    left: 38%;
+  }
+
+
+  .gallery {
+    :global .slick-slide img {
+      height: 350px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .description > p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .back-button {
+    left: 50%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .back-button {
+    height: 35px;
+    top: -81px;
+    font-size: 12px;
+  }
+
+  .slider-buttons {
+    width: 100px;
+    gap: 10px;
+  }
+
+  .slider-buttons button {
+    height: 35px;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .model3d-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: initial;
+  }
+
+  .description > p {
+    font-size: 14px;
+  }
+
+  .back-button {
+    top: -5px;
+  }
+
+  .model h3 {
+    font-size: clamp(1.5rem, 2rem + 0.64vw, 3.125rem);
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: var(--main-color);
+    text-align: left;
+  }
+
+  .instruction {
+    top: 125px;
+    font-size: 12px;
+  }
+
+  .model3d-wrapper {
+    padding-top: 60px;
+  }
+
+  .inputs {
+    column-gap: 5px;
+  }
+
+  .inputs label {
+    font-size: 14px;
+  }
+
+  .inputs input {
+    font-size: 12px;
+  }
+}
+

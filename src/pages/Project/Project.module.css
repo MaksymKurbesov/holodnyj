@@ -1,5 +1,5 @@
 .project {
-  padding: 70px 100px 0;
+  padding: 70px 5.3vw 0;
   /*text-align: center;*/
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@
   padding: 12px 25px;
   border-radius: 20px;
   cursor: pointer;
-  font-family: DisketMonoRegular, 'sans-serif';
+  font-family: DisketMonoRegular, "sans-serif";
   font-weight: 400;
   font-size: 14px;
 }
@@ -26,12 +26,12 @@
 .name {
   position: relative;
   font-family: NeueMachinaLight, sans-serif;
-  font-size: 80px;
-  margin-bottom: 100px;
+  font-size: clamp(1.875rem, 1.1165rem + 3.2362vw, 5rem);
+  margin-bottom: 5.3vw;
 }
 
 .name:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 53%;
   transform: translateY(-50%);
@@ -79,7 +79,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 500px 500px 500px;
-  gap: 100px;
+  gap: 5.3vw;
   margin-bottom: 100px;
 }
 

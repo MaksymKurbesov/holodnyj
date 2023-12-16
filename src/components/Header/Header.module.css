@@ -16,7 +16,7 @@
   position: relative;
   width: 75px;
   height: 38px;
-  margin-left: 40px;
+  margin-left: 20px;
   z-index: 7;
   background: var(--black-color);
   border-radius: 20px;
@@ -82,7 +82,7 @@
   font-size: 14px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 830px) {
   .discuss {
     display: none;
   }
