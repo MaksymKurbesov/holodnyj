@@ -46,7 +46,7 @@ const OrderProcess = () => {
   return (
     <div className={styles["order-process"]}>
       <h2>
-        Процесс <span>разработки</span>
+        Етапи <span>замовлення</span>
       </h2>
       <Accordion data={accordionData} />
     </div>

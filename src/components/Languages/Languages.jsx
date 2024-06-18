@@ -7,7 +7,7 @@ const Languages = ({ status }) => {
       className={`${styles["languages"]} ${status ? styles["isOpen"] : null}`}
     >
       <button>UA</button>
-      <button>RU</button>
+      <button>EN</button>
     </div>
   );
 };

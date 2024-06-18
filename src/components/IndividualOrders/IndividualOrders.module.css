@@ -38,17 +38,24 @@
   transform: translate(-50%, -50%);
   z-index: 5;
   color: white;
-  font-family: NeueMachinaRegular, sans-serif;
+  font-weight: 600;
   font-size: clamp(1.5rem, 1rem + 1.5vw, 4.75rem);
   text-transform: uppercase;
   transition: 0.45s ease all;
   opacity: 0;
+  white-space: nowrap;
+}
+
+.city {
+  font-size: 14px;
+  font-weight: 300;
+  opacity: 0.5;
 }
 
 .inner-text a {
   color: var(--main-color);
-  font-size: 16px;
-  font-family: NeueMachinaLight, sans-serif;
+  font-size: 12px;
+  font-weight: 100;
   border-bottom: 1px solid var(--main-color);
   visibility: hidden;
 }

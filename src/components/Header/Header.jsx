@@ -46,7 +46,7 @@ const Header = () => {
           LOGOTYPE
         </Link>
         <Languages status={menuIsOpen} />
-        <button className={styles["discuss"]}>Обсудить проект</button>
+        <button className={styles["discuss"]}>Зв'язок з нами</button>
         <div
           className={`${styles["hamburger"]} ${
             menuIsOpen && styles["isOpenHamburger"]

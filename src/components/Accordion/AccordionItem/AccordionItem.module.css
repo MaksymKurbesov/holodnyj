@@ -4,7 +4,7 @@
   position: relative;
   margin-left: auto;
   border-radius: 8px;
-  overflow-x: clip;
+  overflow: hidden;
   transition: height ease 0.4s;
   cursor: pointer;
 }

@@ -6,50 +6,58 @@ import ProjectImage4 from "../../assets/projects/project4.jpg";
 export const PROJECTS = [
   {
     name: "Noble Brew",
-    address: "улица Ленина 11, Кривой Рог",
+    address: "вулиця Леніна 11, Кривий Ріг",
     image: ProjectImage1,
     link: "noble-brew",
+    city: "Кривий Ріг"
   },
   {
     name: "Garden Resto Bar",
     address: "улица Гагарина 53, Кривой Рог",
     image: ProjectImage2,
     link: "garden-resto-bar",
+    city: "Київ"
   },
   {
     name: "PRIRODA",
-    address: "улица Нахимова 23, Кривой Рог",
+    address: "вулиця Гагаріна 53, Кривий Ріг",
     image: ProjectImage3,
     link: "priroda",
+    city: "Суми"
   },
   {
     name: "Старая Прага",
-    address: "улица Быкова 87, Кривой Рог",
+    address: "вулиця Бикова 87, Кривий Ріг",
     image: ProjectImage4,
     link: "old_prague",
+    city: "Харків"
   },
   {
     name: "PRIRODA",
-    address: "улица Ленина 11, Кривой Рог",
+    address: "вулиця Леніна 11, Кривий Ріг",
     image: ProjectImage1,
     link: "priroda",
+    city: "Кривий Ріг"
   },
   {
     name: "Garden Resto Bar",
-    address: "улица Гагарина 53, Кривой Рог",
+    address: "вулиця Гагаріна 53, Кривий Ріг",
     image: ProjectImage2,
     link: "garden-resto-bar",
+    city: "Київ"
   },
   {
     name: "Noble Brew",
-    address: "улица Нахимова 23, Кривой Рог",
+    address: "вулиця Нахімова 23, Кривий Ріг",
     image: ProjectImage3,
     link: "noble-brew",
+    city: "Львів"
   },
   {
     name: "Старая Прага",
-    address: "улица Быкова 87, Кривой Рог",
+    address: "вулиця Бикова 87, Кривий Ріг",
     image: ProjectImage4,
     link: "old_prague",
+    city: "Харків"
   },
 ];

@@ -1,7 +1,5 @@
 import React from "react";
 import styles from "./HeroBanner.module.css";
-import Fridge from "../../assets/fridge.png";
-import { ReactComponent as ArrowIcon } from "../../assets/icons/arrow.svg";
 import Slider from "../Slider/Slider";
 
 const HeroBanner = () => {
@@ -10,9 +8,10 @@ const HeroBanner = () => {
       <div className={styles["hero-banner"]}>
         <div className={styles["text-wrapper"]}>
           <p className={`${styles["main-text"]} ${styles["desktop-text"]}`}>
-            Мы производим <span>холодильные</span> <br /> <span>витрины</span>
+            Ми створюємо <span>холодильні</span> <br /> <span>вітрини</span>
             <br />
-            по вашим <br /> размерам
+            з індивідуальним підходом
+
           </p>
           <p className={`${styles["main-text"]} ${styles["mobile-text"]}`}>
             Мы производим <span>холодильные</span>
@@ -20,7 +19,7 @@ const HeroBanner = () => {
             <span>витрины</span> <br /> по вашим размерам
           </p>
           <p className={styles["subtext"]}>
-            Элегантность в каждой детали, свежесть в каждом продукте.
+            Елегантність у кожній деталі, свіжість у кожному продукті
           </p>
         </div>
         <div className={styles["fridge-wrapper"]}>
