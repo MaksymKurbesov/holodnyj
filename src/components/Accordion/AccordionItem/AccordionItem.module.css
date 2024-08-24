@@ -31,7 +31,7 @@
   line-height: 30px;
   color: rgba(0, 0, 0, 0.7);
   padding: 0 50px 0 140px;
-  font-family: NeueMachinaLight, "sans-serif";
+  font-weight: 400;
 }
 
 .count {
@@ -46,7 +46,7 @@
   content: "";
   position: absolute;
   bottom: 0;
-  left: 133px;
+  left: 103px;
   width: 90%;
   height: 2px;
   background: var(--main-color);
@@ -71,6 +71,10 @@
     font-size: 18px;
   }
 
+  .title > p {
+    font-size: 16px;
+  }
+
   .content {
     font-size: 16px;
     padding: 0;
@@ -83,5 +87,19 @@
 
   .icon {
     font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .title > p {
+    font-size: 14px;
+  }
+
+  .accordion-item:before {
+    left: 83px;
+  }
+
+  .count {
+    margin-right: 15px;
   }
 }

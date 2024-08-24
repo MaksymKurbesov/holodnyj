@@ -18,42 +18,42 @@ const Menu = ({ status }) => {
           <nav>
             <ul className={`${styles["nav-list"]}`}>
               <li>
-                <NavLink to={"/"}>Главная</NavLink>
+                <NavLink to={"/"}>Головна</NavLink>
               </li>
               <li>
-                <NavLink to={"/projects"}>Проекты</NavLink>
+                <NavLink to={"/projects"}>Проекти</NavLink>
               </li>
               <li>
-                <NavLink to={"/models"}>Модели</NavLink>
+                <NavLink to={"/models"}>Моделі</NavLink>
               </li>
               <li>
-                <NavLink to={"/about-us"}>О нас</NavLink>
+                <NavLink to={"/about-us"}>Про нас</NavLink>
               </li>
               <li>
-                <NavLink to={"/in-stock"}>В наличие</NavLink>
+                <NavLink to={"/in-stock"}>У наявності</NavLink>
               </li>
               <li>
-                <NavLink to={"/contacts"}>Контакты</NavLink>
+                <NavLink to={"/contacts"}>Контакти</NavLink>
               </li>
             </ul>
           </nav>
           <div className={styles["contacts"]}>
             <p>
-              <span>Почта:</span> holodnyj@gmail.com
+              <span>Пошта:</span> holodnyjmail@gmail.com
             </p>
             <p>
-              <span>Телефон:</span> +380123456789
+              <span>Телефон:</span> +380977040374
             </p>
             <p>
-              <span>Адрес:</span> г.Кривой Рог, ул. Гагарина 53
+              <span>Адреса:</span> м. Кривий Ріг
             </p>
           </div>
         </div>
-        <div className={styles["social-links"]}>
-          <p>Facebook</p>
-          <p>Instagram</p>
-          <p>Telegram</p>
-        </div>
+        {/*<div className={styles["social-links"]}>*/}
+        {/*  <p>Facebook</p>*/}
+        {/*  <p>Instagram</p>*/}
+        {/*  <p>Telegram</p>*/}
+        {/*</div>*/}
       </div>
     </div>
   );

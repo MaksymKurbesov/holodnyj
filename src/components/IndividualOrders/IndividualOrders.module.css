@@ -39,7 +39,7 @@
   z-index: 5;
   color: white;
   font-weight: 600;
-  font-size: clamp(1.5rem, 1rem + 1.5vw, 4.75rem);
+  font-size: clamp(1.5rem, 1rem + 1vw, 4.75rem);
   text-transform: uppercase;
   transition: 0.45s ease all;
   opacity: 0;

@@ -91,7 +91,6 @@
   position: relative;
   margin-bottom: 5px;
   font-size: 30px;
-  font-family: NeueMachinaRegular, "sans-serif";
 }
 
 .projects-list li h3:before {
@@ -106,7 +105,6 @@
 }
 
 .projects-list li p {
-  font-family: NeueMachinaLight, "sans-serif";
   color: rgba(0, 0, 0, 0.4);
 }
 

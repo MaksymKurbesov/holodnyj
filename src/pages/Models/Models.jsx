@@ -18,13 +18,13 @@ const Models = () => {
               selectedClassName={styles["selected-tab"]}
               className={styles["tab"]}
             >
-              <span>Кондитерские витрины</span>
+              <span>Кондитерські вітрини</span>
             </Tab>
             <Tab
               selectedClassName={styles["selected-tab"]}
               className={styles["tab"]}
             >
-              <span>Гастрономические витрины</span>
+              <span>Гастрономічні вітрини</span>
             </Tab>
           </TabList>
 
@@ -42,7 +42,7 @@ const Models = () => {
                       <img src={model.image} alt={""} width={"100%"} />
                     </NavLink>
                   );
-                }
+                },
               )}
             </div>
           </TabPanel>
@@ -60,7 +60,7 @@ const Models = () => {
                       <img src={model.image} alt={""} width={"100%"} />
                     </NavLink>
                   );
-                }
+                },
               )}
             </div>
           </TabPanel>

@@ -5,11 +5,10 @@
   grid-template-columns: 320px 1fr 320px;
   justify-content: space-between;
   color: var(--black-color);
-  font-family: NeueMachinaRegular, "sans-serif";
+  font-weight: 400;
 }
 
 .logotype {
-  font-family: DisketMonoRegular;
   font-size: 36px;
 }
 
@@ -17,17 +16,27 @@
   display: flex;
 }
 
+.contact-links li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-links li img {
+  opacity: 0.65;
+}
+
 .nav-links {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 5.3vw;
-  font-size: 18px;
+  font-size: 16px;
   color: rgba(0, 0, 0, 0.7);
   margin: 0 auto;
 }
 
 .nav-links a {
-  max-width: 100px;
+  width: 110px;
   transition: 0.35s ease all;
 }
 
@@ -58,7 +67,6 @@
 
 .copyright {
   margin-top: auto;
-  font-family: NeueMachinaLight, "sans-serif";
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -101,6 +109,10 @@
     margin-bottom: 2%;
   }
 
+  .contact-links li {
+    margin-bottom: 15px;
+  }
+
   .copyright {
     display: none;
   }
@@ -113,14 +125,24 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  .contact-links {
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .contact-links {
-    gap: 15px;
-    font-size: 14px;
+    font-size: 12px;
     justify-content: space-between;
   }
 
   .nav-links {
-    font-size: 14px;
+    font-size: 12px;
+  }
+
+  .nav-links a {
+    width: 100px;
   }
 }

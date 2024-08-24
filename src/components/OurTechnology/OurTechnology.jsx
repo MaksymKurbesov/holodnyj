@@ -80,9 +80,11 @@ const OurTechnology = () => {
                 <span className={styles["count"]}>/0{index + 1}/</span>
               </div>
               <ul className={styles["description"]}>
-                {item.description.map((descr) => {
+                {item.description.map((descr, index) => {
                   return (
-                    <li className={styles["description-list-item"]}>{descr}</li>
+                    <li key={index} className={styles["description-list-item"]}>
+                      {descr}
+                    </li>
                   );
                 })}
               </ul>

@@ -78,8 +78,9 @@
   border: none;
   border-radius: 20px;
   text-transform: uppercase;
-  font-family: inherit;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 830px) {

@@ -7,39 +7,21 @@ import Model6 from "../../assets/models/6.jpg";
 
 export const MODELS_DATA = [
   {
-    name: "Exclusive 51P",
+    name: "CAKE",
     image: Model1,
-    link: "exclusive-51p",
+    link: "cake",
     type: "pastry",
   },
   {
-    name: "I-Glass Vertical",
+    name: "ÉCLAIR",
     image: Model2,
-    link: "i-glass-vertical",
+    link: "eclair",
     type: "pastry",
   },
   {
-    name: "Brilliant",
+    name: "BROWNIE",
     image: Model3,
-    link: "brilliant",
+    link: "brownie",
     type: "pastry",
-  },
-  {
-    name: "Exclusive 74P",
-    image: Model4,
-    link: "exclusive-74p",
-    type: "gastronomic",
-  },
-  {
-    name: "Exclusive 74S",
-    image: Model5,
-    link: "exclusive-74s",
-    type: "gastronomic",
-  },
-  {
-    name: "Islandzero",
-    image: Model6,
-    link: "islandzero",
-    type: "gastronomic",
   },
 ];

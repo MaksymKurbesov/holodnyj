@@ -70,7 +70,7 @@ const calculateSlides = (windowWidth) => {
 const Model = () => {
   const location = useLocation();
   const model = IN_STOCK_DATA.find(
-    (model) => model.link === location.pathname.split("/")[2]
+    (model) => model.link === location.pathname.split("/")[2],
   );
 
   const settings = {
@@ -99,7 +99,7 @@ const Model = () => {
   const [width, setWidth] = useState(isInStock ? model.width : "");
   const [deep, setDeep] = useState(isInStock ? model.deep : "");
   const [mirrorHeight, setMirrorHeight] = useState(
-    isInStock ? model.mirror_height : ""
+    isInStock ? model.mirror_height : "",
   );
   const [price, setPrice] = useState(isInStock ? model.price : "-");
   const [shelves, setShelves] = useState(isInStock ? model.shelves : "");
@@ -174,52 +174,31 @@ const Model = () => {
         </Link>
         <div className={styles["model"]}>
           <div className={styles["model3d-wrapper"]}>
-            {window.innerWidth <= 700 && <h3>{model.name}</h3>}
+            {/*{window.innerWidth <= 700 && <h3>{model.name}</h3>}*/}
             <span className={styles["instruction"]}>
-              Вертите модель, используя мышь или пальцы
+              Вертіть модель, використовуючи мишу або пальці
             </span>
             <div className={styles["threesixty"]} ref={threeSixtyRef}></div>
           </div>
 
           <div className={styles["description"]}>
-            {window.innerWidth > 700 && (
-              <>
-                <span>Название</span>
-                <h3>{model.name}</h3>
-              </>
-            )}
-            <span>Описание</span>
-            <p>
-              Витрины FLAT разработаны и оформлены в соответствии с новой
-              эстетической концепцией эссенциальности и гибкости в отделке.
-              Теплоизолированные резервуары изготовлены из экологически чистого
-              полиуретана, стандартная панель витрины выполнена из нержавеющей
-              стали, но может быть изготовлена из различных материалов, таких
-              как керамогранит, акрил, кварцевый композит, натуральный мрамор.
-              Забор и отвод воздуха в витринах с положительной температурой
-              осуществляется через микроперфорированную стальную пластину, а
-              цифровой температурный дисплей располагается заподлицо с верхней
-              частью.
-              <br />
-              <br />В стандартном исполнении боковые стекла всех холодильных
-              моделей имеют подогрев, а стандартные передние стекла оснащены
-              фронтальным дефлектором, но по запросу могут быть выполнены в
-              подогреваемом варианте. Компания Ciam запатентовала инновационную
-              систему антизапотевания низковольтных стекол. Эта система
-              предполагает использование абсолютно прозрачного пиролитического
-              стекла толщиной 8 мм со скрытым сопротивлением; таким образом,
-              достигается эффект стандартной стеклянной конструкции, даже в
-              случае стекла с подогревом! <br />
-              <br /> Все стеклянные конструкции имеют одинаковую фурнитуру, а
-              все детали разработаны и изготовлены с использованием стальных
-              микроформовочных штампов. В блестящий алюминиевый светильник
-              встроена светодиодная лента 3000°К без точечной подсветки, в
-              верхний светильник встроен дверной трек для раздвижных дверей из
-              оргстекла (со стороны оператора), обеспечивающий плотное закрытие
-              холодильного пространства, что возможно даже благодаря уплотнению
-              по периметру. Стеклянные полки имеют встроенную подсветку и могут
-              регулироваться
-            </p>
+            {/*{window.innerWidth > 700 && (*/}
+            {/*  <>*/}
+            {/*    <span>Назва</span>*/}
+            {/*    <h3>{model.name}</h3>*/}
+            {/*  </>*/}
+            {/*)}*/}
+            <>
+              <span>Назва</span>
+              <h3>{model.name}</h3>
+            </>
+            <span>Опис</span>
+            <p>{model.description}</p>
+            <ul className={styles["features-list"]}>
+              {model.features.map((item, index) => {
+                return <li key={index}>{item}</li>;
+              })}
+            </ul>
             <div className={styles["calculate-price"]}>
               <div className={styles["inputs"]}>
                 <div>
@@ -230,24 +209,24 @@ const Model = () => {
                     <input
                       value={width}
                       onChange={(e) => setWidth(e.target.value)}
-                      placeholder={"Укажите ширину"}
+                      placeholder={"Вкажіть ширину"}
                     />
                   )}
                 </div>
                 <div>
-                  <label>Глубина (см)</label>
+                  <label>Глибина (см)</label>
                   {isInStock ? (
                     <p className={styles["in-stock-info"]}>{model.deep}</p>
                   ) : (
                     <input
-                      placeholder={"Укажите глубину"}
+                      placeholder={"Вкажіть глибину"}
                       value={deep}
                       onChange={(e) => setDeep(e.target.value)}
                     />
                   )}
                 </div>
                 <div>
-                  <label>Высота стекла (см)</label>
+                  <label>Висота скла (см)</label>
                   {isInStock ? (
                     <p className={styles["in-stock-info"]}>
                       {model.mirror_height}
@@ -256,19 +235,19 @@ const Model = () => {
                     <input
                       value={mirrorHeight}
                       onChange={(e) => setMirrorHeight(e.target.value)}
-                      placeholder={"Укажите высоту стекла"}
+                      placeholder={"Вкажіть висоту скла"}
                     />
                   )}
                 </div>
                 <div>
-                  <label>Кол-во полок</label>
+                  <label>Кількість полиць</label>
                   {isInStock ? (
                     <p className={styles["in-stock-info"]}>{model.shelves}</p>
                   ) : (
                     <input
                       value={shelves}
                       onChange={(e) => setShelves(e.target.value)}
-                      placeholder={"Укажите кол-во полок"}
+                      placeholder={"Вкажіть кількість полиць"}
                     />
                   )}
                 </div>
@@ -278,10 +257,10 @@ const Model = () => {
                   isDirty && !isInStock ? styles["show-error-message"] : ""
                 }`}
               >
-                Укажите все параметры для расчёта!
+                Вкажіть усі параметри для розрахунку!
               </p>
               <p className={styles["price"]}>
-                Стоимость: <span>{isInStock ? model.price : price}</span> UAH
+                Вартість: <span>{isInStock ? model.price : price}</span> UAH
               </p>
               {isInStock ? (
                 <button
@@ -290,7 +269,7 @@ const Model = () => {
                   }}
                   className={styles["submit-form-button"]}
                 >
-                  Купить
+                  Купити
                 </button>
               ) : (
                 <button
@@ -299,7 +278,7 @@ const Model = () => {
                   }}
                   className={styles["submit-form-button"]}
                 >
-                  Рассчитать стоимость
+                  Розрахувати вартість
                 </button>
               )}
 
@@ -356,7 +335,7 @@ const Model = () => {
           modal: styles["customModal"],
         }}
       >
-        <h3>Оформление заказа</h3>
+        <h3>Оформлення замовлення</h3>
         <p>
           Модель: <span>{model.name}</span>
         </p>
@@ -367,34 +346,34 @@ const Model = () => {
           Ширина: <span>{width}см</span>
         </p>
         <p>
-          Глубина: <span>{deep}см</span>
+          Глибина: <span>{deep}см</span>
         </p>
         <p>
-          Высота стекла: <span>{mirrorHeight}см</span>
+          Висота скла: <span>{mirrorHeight}см</span>
         </p>
         <p>
-          Кол-во полок: <span>{shelves}шт</span>
+          Кількість полиць: <span>{shelves}шт</span>
         </p>
         <p className={styles["bill-price"]}>
-          Цена: <span>{price} UAH</span>
+          Ціна: <span>{price} UAH</span>
         </p>
         <div className={styles["modal-inputs"]}>
-          <h3>Контакты для связи</h3>
+          <h3>Контакти для зв'язку</h3>
           <div>
             <label>Имя</label>
             <input
               value={userName}
               onChange={(e) => setUserName(e.target.value)}
-              placeholder={"Введите имя"}
+              placeholder={"Введіть ім'я"}
               type={"text"}
             />
           </div>
           <div>
-            <label>Telegram или номер телефона</label>
+            <label>Telegram або номер телефону</label>
             <input
               value={userContact}
               onChange={(e) => setUserContact(e.target.value)}
-              placeholder={"Введите telegram или номер телефона"}
+              placeholder={"Введіть telegram або номер телефону"}
               type={"text"}
             />
           </div>
@@ -404,13 +383,15 @@ const Model = () => {
             dataSubmitted ? styles["show-success-message"] : ""
           }`}
         >
-          Заявка на оформление заказа успешно оформлена! <br /> Ждите пока с
-          вами свяжется менеджер.
+          Заявка на оформлення замовлення успішно оформлена! <br /> Чекайте поки
+          з вами зв'яжеться менеджер.
         </p>
         {!dataSubmitted && (
           <div className={styles["modal-buttons"]}>
-            <button onClick={closeModal}>Отмена</button>
-            <button onClick={() => sendDataToTelegram()}>Оформить заказ</button>
+            <button onClick={closeModal}>Скасування</button>
+            <button onClick={() => sendDataToTelegram()}>
+              Оформити замовлення
+            </button>
           </div>
         )}
       </Modal>

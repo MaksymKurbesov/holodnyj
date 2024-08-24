@@ -11,7 +11,7 @@ const Projects = () => {
     <section>
       <Header />
       <div className={styles["projects"]}>
-        <h2>Проекты</h2>
+        <h2>Проекти</h2>
         <ul className={styles["projects-list"]}>
           {PROJECTS.map((project, index) => {
             return (

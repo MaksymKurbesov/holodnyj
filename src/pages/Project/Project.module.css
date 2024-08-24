@@ -18,14 +18,12 @@
   padding: 12px 25px;
   border-radius: 20px;
   cursor: pointer;
-  font-family: DisketMonoRegular, "sans-serif";
   font-weight: 400;
   font-size: 14px;
 }
 
 .name {
   position: relative;
-  font-family: NeueMachinaLight, sans-serif;
   font-size: clamp(1.875rem, 1.1165rem + 3.2362vw, 5rem);
   margin-bottom: 5.3vw;
 }
@@ -48,7 +46,6 @@
 }
 
 .address {
-  font-family: NeueMachinaLight, sans-serif;
   margin-bottom: 50px;
   color: rgba(0, 0, 0, 0.6);
 }
@@ -60,7 +57,6 @@
 .description-title {
   font-size: 50px;
   /*font-weight: 700;*/
-  font-family: NeueMachinaLight, sans-serif;
   color: var(--main-color);
   margin-right: auto;
   margin-bottom: 50px;
@@ -68,8 +64,8 @@
 
 .description {
   max-width: 800px;
-  font-family: NeueMachinaLight, sans-serif;
   font-size: 24px;
+  font-weight: 400;
   line-height: 1.8;
   color: rgba(0, 0, 0, 0.6);
   margin-bottom: 170px;
@@ -89,4 +85,47 @@
 
 .additional-photos img {
   object-fit: cover;
+}
+
+@media screen and (max-width: 1250px) {
+  .back-button {
+    left: 42%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .additional-photos {
+    grid-template-rows: 300px 300px 300px;
+  }
+
+  .back-button {
+    height: 35px;
+    top: 0;
+    font-size: 12px;
+    left: 50%;
+  }
+
+  .description {
+    font-size: 16px;
+    margin-bottom: 70px;
+  }
+
+  .address {
+    margin-bottom: 25px;
+  }
+
+  .main-image {
+    width: 100%;
+    margin-bottom: 70px;
+  }
+
+  .additional-photos {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .additional-photos {
+    grid-template-rows: 200px 200px 200px;
+  }
 }

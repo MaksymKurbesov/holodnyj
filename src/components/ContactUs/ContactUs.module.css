@@ -17,7 +17,7 @@
   font-size: clamp(1.5rem, 1rem + 4vw, 4.75rem);
   color: white;
   margin-bottom: 20px;
-  font-family: NeueMachinaUltraBold;
+  /*font-family: NeueMachinaUltraBold;*/
 }
 
 .contact-wrapper img {
@@ -25,7 +25,7 @@
 }
 
 .contact-wrapper p {
-  font-family: NeueMachinaLight, "sans-serif";
+  /*font-family: NeueMachinaLight, "sans-serif";*/
   font-size: 20px;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 80px;
@@ -35,6 +35,11 @@
   width: 100%;
   padding: 50px;
   background: var(--main-color);
+}
+
+.text p {
+  font-weight: 300;
+  font-size: 16px;
 }
 
 .inputs-wrapper {
@@ -56,7 +61,7 @@
   background: none;
   border: none;
   border-bottom: 2px solid rgba(255, 255, 255, 0.4);
-  font-family: NeueMachinaRegular, sans-serif;
+  /*font-family: NeueMachinaRegular, sans-serif;*/
   font-size: 20px;
   color: white;
   outline: none;
@@ -67,7 +72,7 @@
   position: absolute;
   top: 15px;
   color: var(--light-gray-color);
-  font-family: NeueMachinaRegular, sans-serif;
+  /*font-family: NeueMachinaRegular, sans-serif;*/
 }
 
 .input::placeholder {
@@ -83,7 +88,7 @@
   border: none;
   padding: 10px 35px;
   border-radius: 20px;
-  font-family: NeueMachinaRegular, sans-serif;
+  /*font-family: NeueMachinaRegular, sans-serif;*/
   text-transform: uppercase;
 }
 
@@ -106,6 +111,14 @@
   .contact-wrapper p {
     font-size: 16px;
     margin-bottom: 40px;
+  }
+
+  .input label {
+    font-size: 12px;
+  }
+
+  .text p {
+    font-size: 14px;
   }
 
   .contact-us input {

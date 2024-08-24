@@ -16,8 +16,9 @@
   margin-top: 10px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 480px) {
   .slide-image {
+    max-height: 60vw;
     /*max-height: 420px;*/
   }
 }

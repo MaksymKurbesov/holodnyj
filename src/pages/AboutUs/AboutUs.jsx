@@ -123,7 +123,7 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
-      <span className={styles["mini-title"]}>Партнёры</span>
+      <span className={styles["mini-title"]}>Партнери</span>
       <div className={styles["partners"]}>
         <Partner1 />
         <Partner2 />

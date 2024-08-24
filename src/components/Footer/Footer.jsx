@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import Facebook from "../../assets/social-icons/facebook.png";
-import Instagram from "../../assets/social-icons/instagram.png";
-import Telegram from "../../assets/social-icons/telegram.png";
-import Viber from "../../assets/social-icons/viber.png";
+import MailIcon from "../../assets/icons/footer-mail.svg";
+import PhoneIcon from "../../assets/icons/footer-phone.svg";
+import GeoIcon from "../../assets/icons/footer-geo.svg";
+
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
@@ -14,26 +14,33 @@ const Footer = () => {
           <p className={styles["logotype"]}>LOGOTYPE</p>
         </NavLink>
         <p className={styles["copyright"]}>
-          © 2023 holodnyj все права защищены.
+          © 2024 holodnyj всі права захищені.
         </p>
       </div>
       <nav className={styles["nav-links"]}>
-        <NavLink to={"/"}>Главная</NavLink>
-        <NavLink to={"/in-stock"}>В наличие</NavLink>
-        <NavLink to={"/projects"}>Проекты</NavLink>
-        <NavLink to={"/models"}>Модели</NavLink>
-        <NavLink to={"/about-us"}>О нас</NavLink>
-        <NavLink to={"/contacts"}>Контакты</NavLink>
+        <NavLink to={"/"}>Головна</NavLink>
+        <NavLink to={"/in-stock"}>Проекти</NavLink>
+        <NavLink to={"/projects"}>Моделі</NavLink>
+        <NavLink to={"/models"}>Про нас</NavLink>
+        <NavLink to={"/about-us"}>У наявності</NavLink>
+        <NavLink to={"/contacts"}>Контакти</NavLink>
       </nav>
       <div className={styles["last-column"]}>
         <ul className={styles["contact-links"]}>
-          <li>Facebook</li>
-          <li>Instagram</li>
-          <li>Telegram</li>
-          <li>Viber</li>
+          <li>
+            <img width={20} src={MailIcon} alt={""} />
+            holodnyjmail@gmail.com
+          </li>
+          <li>
+            <img width={15} src={PhoneIcon} alt={""} />
+            +380977040374
+          </li>
+          <li>
+            <img width={20} src={GeoIcon} alt={""} /> м. Кривий Ріг
+          </li>
         </ul>
         <p className={styles["mobile-copyright"]}>
-          © 2023 holodnyj все права защищены.
+          © 2024 holodnyj всі права захищені.
         </p>
       </div>
     </footer>

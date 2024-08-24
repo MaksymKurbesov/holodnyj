@@ -9,14 +9,11 @@ const HeroBanner = () => {
         <div className={styles["text-wrapper"]}>
           <p className={`${styles["main-text"]} ${styles["desktop-text"]}`}>
             Ми створюємо <span>холодильні</span> <br /> <span>вітрини</span>
-            <br />
-            з індивідуальним підходом
-
+            <br />з індивідуальним підходом
           </p>
           <p className={`${styles["main-text"]} ${styles["mobile-text"]}`}>
-            Мы производим <span>холодильные</span>
-            <br />
-            <span>витрины</span> <br /> по вашим размерам
+            Ми створюємо <span>холодильні</span> <br /> <span>вітрини</span>
+            <br />з індивідуальним підходом
           </p>
           <p className={styles["subtext"]}>
             Елегантність у кожній деталі, свіжість у кожному продукті
